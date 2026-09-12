@@ -16,7 +16,7 @@ const YourStack = ({ selectedTech, setSelectedTech }: YourStackProps) => {
   const handleRemoveAll = () => {
     setSelectedTech([]);
 
-    toast.warn("Cleared all technologies from stack", {
+    toast.warn("remove all stack Card!", {
       position: "top-center",
       autoClose: 3000,
       hideProgressBar: false,
