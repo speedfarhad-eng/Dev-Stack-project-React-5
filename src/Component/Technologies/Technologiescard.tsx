@@ -29,6 +29,7 @@ const TechnologiesCard = ({
       theme: "light",
       transition: Bounce,
     });
+    
   };
 
   return (
