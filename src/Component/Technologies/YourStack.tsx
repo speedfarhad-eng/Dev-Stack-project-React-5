@@ -1,5 +1,6 @@
 import type { Technology } from "../../types/types";
 import { TiDelete } from "react-icons/ti";
+import toast, { Toaster } from 'react-hot-toast'; //
 
 interface YourStackProps {
   selectedTech: Technology[];
@@ -13,10 +14,15 @@ const YourStack = ({ selectedTech, setSelectedTech }: YourStackProps) => {
 
   const handleRemoveAll = () => {
     setSelectedTech([]);
+
+
+    
   };
 
   return (
     <div className="border border-gray-200 rounded-2xl p-5 bg-white shadow-sm">
+
+      <Toaster position="top-right" reverseOrder={false} />
       <div className="mb-1">
         <h3 className="font-bold text-gray-900 text-lg">Your Stack</h3>
         <p className="text-xs font-medium text-gray-400 mt-0.5">
@@ -52,6 +58,8 @@ const YourStack = ({ selectedTech, setSelectedTech }: YourStackProps) => {
                 </div>
               </div>
 
+              {/* crose button react theke anchi */}
+
               <button
                 onClick={() => handleRemove(tech.id)}
                 className="text-gray-400 hover:text-red-500 text-lg cursor-pointer transition-colors"
@@ -67,7 +75,7 @@ const YourStack = ({ selectedTech, setSelectedTech }: YourStackProps) => {
 
 
 
-      {/* Remove All */}
+      {/* Remove All button ready*/}
 
 
       {selectedTech.length > 0 && (

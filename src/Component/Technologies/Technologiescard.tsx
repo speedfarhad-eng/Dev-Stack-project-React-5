@@ -13,7 +13,7 @@ const TechnologiesCard = ({
   selectedTech,
   setSelectedTech,
 }: TechnologiesCardProps) => {
-  const isSelected = selectedTech.some((card) => card.id === tech.id);
+  const isSelected = selectedTech.filter((card) => card.id === tech.id).length >0;
 
   const handleAddToStack = () => {
     if (isSelected) return;

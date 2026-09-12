@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import Banner from "./Component/Banner";
 import Nav from "./Component/Nav";
 import Technologies from "./Component/Technologies/Technologies";
@@ -11,9 +11,11 @@ const languagefetch =async (): Promise<Technology[]> =>{
   const data = await response.json()
   return data;
 }
- const dataPromise = languagefetch()
+
 
 function App() {
+
+ const [dataPromise] =useState (() =>languagefetch())
 
 
   return (
@@ -27,7 +29,7 @@ function App() {
  <Banner /> 
   
   
-  <Suspense fallback={<div>Loading...</div>}>
+  <Suspense fallback={<div>Farhad Loading...</div>}>
    <Technologies dataPromise={dataPromise}/>
   </Suspense>
  
