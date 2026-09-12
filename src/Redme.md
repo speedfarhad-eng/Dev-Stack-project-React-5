@@ -54,15 +54,15 @@
 
 you pass data from a parent component to a child component:-
 When we pass data and functions from the Technologies.tsx parent component to AllTechnologies, TechnologiesCard, and YourStack..
-<!-- <AllTechnologies
+<AllTechnologies
   fetchData={fetchData}  
   selectedTech={selectedTech} 1   //1  and 2 are being passed to the child component as props.
   setSelectedTech={setSelectedTech}2 
-/> -->
+/>
 ------->how data is sent from the child to the parent: when I click "Add to Stack", the child component calls the setSelectedTech function to add a new tech card:
-<!-- const handleAddToStack = () => {
-  <!-- if (isSelected) return;
+const handleAddToStack = () => {
+  if (isSelected) return;
   setSelectedTech((farhad) => [...farhad, tech]); // New data sent from the child to the parent
   // ...
-}; --> --> -->
+}; -->
  
